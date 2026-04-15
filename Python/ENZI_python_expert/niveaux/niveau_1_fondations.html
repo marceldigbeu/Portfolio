@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niveau 1 - Fondations Python</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #0b1020; color: #e8eefc; line-height: 1.6; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #121a30; border: 1px solid #24314e; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  h1, h2 { margin-top: 0; }
+  p, li { color: #aab8d8; }
+  code, pre { font-family: Consolas, monospace; background: #091121; color: #bfe7ff; }
+  pre { padding: 14px; border-radius: 12px; overflow-x: auto; border: 1px solid #24314e; }
+  .mark { color: #69e0bf; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Niveau 1 - Fondations</h1>
+    <p>(System) Ici tu apprends a manipuler une seule valeur correctement. Tant que ce niveau n'est pas stable, tout le reste parait flou.</p>
+    <p>[Critical Node] <strong>Savoir quel type tu manipules</strong>. Le bon operateur depend toujours du type.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Blueprint]</h2>
+    <pre>valeur -> type -> operateur -> resultat</pre>
+    <p>Lis cette chaine comme un petit circuit electrique: si tu te trompes de type, le courant logique part mal.</p>
+  </div>
+
+  <div class="box">
+    <h2>Ce que tu dois maitriser</h2>
+    <ul>
+      <li>affectation: <code>=</code></li>
+      <li>calculs: <code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>//</code> <code>%</code> <code>**</code></li>
+      <li>comparaisons: <code>==</code> <code>!=</code> <code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></li>
+      <li>logique: <code>and</code> <code>or</code> <code>not</code></li>
+      <li>conversion: <code>int()</code> <code>float()</code> <code>str()</code> <code>bool()</code></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Pseudo-code]</h2>
+    <pre>prendre une valeur
+identifier son type
+appliquer le bon operateur
+verifier le resultat affiche</pre>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>x = 10
+y = 3
+
+print(x + y)   # 13
+print(x / y)   # division reelle
+print(x // y)  # division entiere
+print(x % y)   # reste
+print(x ** y)  # puissance
+print(x > y)   # comparaison
+print(x > 0 and y > 0)  # logique</pre>
+    <p>Analogie machine: le type est la piece, l'operateur est l'outil. Un tournevis sur un boulon, ca glisse. Un mauvais operateur sur le mauvais type fait pareil.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Line Audit]</h2>
+    <ul>
+      <li><code>x = 10</code> : Assignment. Tu stockes une valeur entiere.</li>
+      <li><code>y = 3</code> : Assignment. Deuxieme valeur entiere.</li>
+      <li><code>x + y</code> : Arithmetic. Addition.</li>
+      <li><code>x / y</code> : Arithmetic. Division float.</li>
+      <li><code>x // y</code> : Arithmetic. Division entiere.</li>
+      <li><code>x % y</code> : Arithmetic. Reste de division.</li>
+      <li><code>x ** y</code> : Arithmetic. Puissance.</li>
+      <li><code>x > y</code> : Comparison. Retourne un bool.</li>
+      <li><code>x > 0 and y > 0</code> : Comparison + Condition logic.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Mini guide operateurs du niveau 1</h2>
+    <ul>
+      <li><code>=</code> : ranger une valeur dans une variable</li>
+      <li><code>+</code> : additionner des nombres ou concatener des chaines</li>
+      <li><code>//</code> : utile quand tu veux un quotient entier</li>
+      <li><code>%</code> : indispensable pour parite, cycles, decoupages</li>
+      <li><code>==</code> : comparer des valeurs</li>
+      <li><code>and</code> : demander si deux conditions sont vraies</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Mission</h2>
+    <pre>1. Cree deux variables age et taille
+2. Affiche leur somme
+3. Teste si age est pair avec %
+4. Teste si age > 18 and taille > 170</pre>
+  </div>
+</div>
+</body>
+</html>

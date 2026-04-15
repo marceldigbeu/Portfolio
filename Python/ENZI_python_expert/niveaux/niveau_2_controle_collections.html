@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niveau 2 - Controle et collections</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #09111d; color: #eef5ff; line-height: 1.6; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #121c2b; border: 1px solid #25364f; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  p, li { color: #a9bad4; }
+  pre, code { font-family: Consolas, monospace; background: #0a1322; color: #c5e7ff; }
+  pre { padding: 14px; border-radius: 12px; border: 1px solid #25364f; overflow-x: auto; }
+  .mark { color: #80a8ff; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Niveau 2 - Controle et collections</h1>
+    <p>(System) Tu ne manipules plus une valeur seule. Tu prends des decisions et tu parcours des series de donnees.</p>
+    <p>[Critical Node] <strong>Le couple condition + boucle</strong>. C'est lui qui transforme une liste brute en resultat utile.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Blueprint]</h2>
+    <pre>collection -> lecture -> test -> action -> resultat</pre>
+    <p>Lis le schema comme une chaine de tri sur tapis roulant: chaque element passe devant une porte de controle.</p>
+  </div>
+
+  <div class="box">
+    <h2>Ce que tu dois maitriser</h2>
+    <ul>
+      <li><code>if / elif / else</code></li>
+      <li><code>for</code> et <code>while</code></li>
+      <li><code>in</code> et <code>not in</code></li>
+      <li>indexation <code>[]</code> et slicing <code>[:]</code></li>
+      <li>list, tuple, dict, set</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>notes = [12, 7, 18, 10]
+total = 0
+
+for note in notes:
+    if note >= 10:
+        total += note
+
+print(total)</pre>
+    <p>Ici, <code>for</code> fait avancer le tapis. <code>if</code> decide si la piece entre dans la caisse finale.</p>
+  </div>
+
+  <div class="box">
+    <h2>Operateurs a verrouiller</h2>
+    <ul>
+      <li><code>in</code> : tester la presence d'une valeur</li>
+      <li><code>not in</code> : tester l'absence</li>
+      <li><code>[]</code> : acceder a un element</li>
+      <li><code>[:]</code> : extraire une tranche</li>
+      <li><code>+=</code> : accumuler proprement</li>
+      <li><code>|</code> <code>&amp;</code> <code>-</code> sur les sets : union, intersection, difference</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Line Audit]</h2>
+    <ul>
+      <li><code>notes = [...]</code> : Assignment. Creation de collection.</li>
+      <li><code>total = 0</code> : Assignment. Accumulateur.</li>
+      <li><code>for note in notes</code> : Loop control. Parcours d'une liste.</li>
+      <li><code>if note >= 10</code> : Condition + Comparison. Filtre.</li>
+      <li><code>total += note</code> : Arithmetic + Assignment. Addition accumulee. Inside loop.</li>
+      <li><code>print(total)</code> : Call. Affichage final. Outside loop.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Mini mission</h2>
+    <pre>prenoms = ["Lina", "Noe", "Mila", "Adam"]
+
+1. teste si "Noe" in prenoms
+2. affiche prenoms[0]
+3. affiche prenoms[1:3]
+4. compte combien de prenoms ont plus de 3 lettres</pre>
+  </div>
+</div>
+</body>
+</html>

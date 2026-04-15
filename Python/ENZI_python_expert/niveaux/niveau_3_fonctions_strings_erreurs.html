@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niveau 3 - Fonctions, strings, erreurs</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #0c0f1c; color: #edf1ff; line-height: 1.6; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #151a2d; border: 1px solid #2b3557; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  p, li { color: #b8c2df; }
+  pre, code { font-family: Consolas, monospace; background: #0b1222; color: #cfe8ff; }
+  pre { padding: 14px; border-radius: 12px; border: 1px solid #2b3557; overflow-x: auto; }
+  .mark { color: #ffbe6b; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Niveau 3 - Fonctions, strings, erreurs</h1>
+    <p>(System) Tu passes du script local a un code reutilisable. Tu organises des blocs, tu renvoies des valeurs, tu traites du texte, tu controles les cas qui cassent.</p>
+    <p>[Critical Node] <strong>return, pas print</strong>. Une fonction doit produire une valeur, pas juste du bruit console.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Blueprint]</h2>
+    <pre>entree -> fonction -> traitement -> return -> reutilisation</pre>
+    <p>Lis le schema comme une usine: la fonction est une machine. Si elle ne renvoie rien, la ligne de production ne peut pas continuer.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Pseudo-code]</h2>
+    <pre>recevoir des parametres
+verifier les cas limites
+transformer les donnees
+return le resultat</pre>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>def nettoyer_nom(nom: str) -> str:
+    if not nom:
+        return ""
+    return nom.strip().title()
+
+texte = nettoyer_nom("  ada lovelace ")
+print(texte)</pre>
+  </div>
+
+  <div class="box">
+    <h2>Operateurs et outils a verrouiller</h2>
+    <ul>
+      <li><code>not</code> pour tester le vide logique</li>
+      <li><code>+</code> sur les strings pour concatener, mais avec mesure</li>
+      <li><code>in</code> sur une chaine pour chercher un motif</li>
+      <li><code>is</code> et <code>is not</code> pour <code>None</code></li>
+      <li><code>try / except</code> pour contenir une erreur de conversion</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Line Audit]</h2>
+    <ul>
+      <li><code>def nettoyer_nom(...)</code> : Definition. Creation d'une fonction.</li>
+      <li><code>if not nom</code> : Condition. Test de chaine vide.</li>
+      <li><code>return ""</code> : Return. Cas limite.</li>
+      <li><code>nom.strip().title()</code> : Call chain. Nettoyage puis mise en forme.</li>
+      <li><code>texte = nettoyer_nom(...)</code> : Assignment + Call.</li>
+      <li><code>print(texte)</code> : Affichage dans le programme principal.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Mission</h2>
+    <pre>1. Cree une fonction qui recoit une phrase
+2. Elle renvoie la phrase en majuscules
+3. Si la phrase est vide, elle renvoie "vide"
+4. Ajoute un try/except pour convertir un age saisi en int</pre>
+  </div>
+</div>
+</body>
+</html>

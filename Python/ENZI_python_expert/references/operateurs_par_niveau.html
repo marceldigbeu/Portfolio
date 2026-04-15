@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operateurs Python par niveau</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #09101a; color: #edf3ff; line-height: 1.6; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #121b2d; border: 1px solid #28395b; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  th, td { border-bottom: 1px solid #28395b; padding: 10px; text-align: left; vertical-align: top; }
+  th { color: #6ee1bf; }
+  p, li { color: #b5c3df; }
+  code, pre { font-family: Consolas, monospace; background: #0c1322; color: #cbe6ff; }
+  pre { padding: 14px; border-radius: 12px; border: 1px solid #28395b; overflow-x: auto; }
+  .mark { color: #6ee1bf; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Reference - Operateurs Python par niveau</h1>
+    <p>(System) Cette page prend la partie "operateurs" de la fiche source et la reconstruit comme une progression. Le but n'est pas de tout voir a plat, mais de voir quand chaque operateur devient utile.</p>
+    <p>[Critical Node] <strong>Un operateur n'a de sens qu'avec son type et son contexte.</strong></p>
+  </div>
+
+  <div class="box">
+    <h2>[Blueprint]</h2>
+    <pre>niveau 1 : calculer et comparer
+niveau 2 : tester et parcourir
+niveau 3 : manipuler des structures
+niveau 4 : combiner des collections
+niveau 5 : operer sur des bits ou des flux plus abstraits</pre>
+  </div>
+
+  <div class="box">
+    <h2>Niveau 1 - Operateurs vitaux</h2>
+    <table>
+      <tr><th>Operateur</th><th>Role</th><th>Exemple</th></tr>
+      <tr><td><code>=</code></td><td>affectation</td><td><code>x = 4</code></td></tr>
+      <tr><td><code>+</code> <code>-</code> <code>*</code> <code>/</code></td><td>calcul de base</td><td><code>7 / 2</code></td></tr>
+      <tr><td><code>//</code></td><td>division entiere</td><td><code>7 // 2 == 3</code></td></tr>
+      <tr><td><code>%</code></td><td>reste, parite, cycle</td><td><code>8 % 2 == 0</code></td></tr>
+      <tr><td><code>**</code></td><td>puissance</td><td><code>2 ** 3 == 8</code></td></tr>
+      <tr><td><code>==</code> <code>!=</code> <code>&lt;</code> <code>&gt;</code></td><td>comparaison</td><td><code>x != 0</code></td></tr>
+      <tr><td><code>and</code> <code>or</code> <code>not</code></td><td>logique booleenne</td><td><code>x > 0 and y > 0</code></td></tr>
+    </table>
+  </div>
+
+  <div class="box">
+    <h2>Niveau 2 - Presence, parcours, extraction</h2>
+    <table>
+      <tr><th>Operateur</th><th>Role</th><th>Exemple</th></tr>
+      <tr><td><code>in</code> <code>not in</code></td><td>appartenance</td><td><code>"a" in "chat"</code></td></tr>
+      <tr><td><code>[]</code></td><td>indexation</td><td><code>notes[0]</code></td></tr>
+      <tr><td><code>[:]</code></td><td>slicing</td><td><code>notes[1:3]</code></td></tr>
+      <tr><td><code>+=</code> <code>-=</code> <code>*=</code></td><td>mise a jour compacte</td><td><code>total += note</code></td></tr>
+    </table>
+  </div>
+
+  <div class="box">
+    <h2>Niveau 3 - Identite et cas limites</h2>
+    <table>
+      <tr><th>Operateur</th><th>Role</th><th>Exemple</th></tr>
+      <tr><td><code>is</code> <code>is not</code></td><td>identite, surtout avec None</td><td><code>x is None</code></td></tr>
+      <tr><td><code>+</code> sur <code>str</code> et <code>list</code></td><td>concatener</td><td><code>"Py" + "thon"</code></td></tr>
+      <tr><td><code>*</code> sur <code>str</code> et <code>list</code></td><td>repetition</td><td><code>"ha" * 3</code></td></tr>
+    </table>
+    <p>Point critique: <code>==</code> compare la valeur, <code>is</code> teste l'identite. Pour <code>None</code>, utilise toujours <code>is</code>.</p>
+  </div>
+
+  <div class="box">
+    <h2>Niveau 4 - Operateurs de collections riches</h2>
+    <table>
+      <tr><th>Operateur</th><th>Role</th><th>Exemple</th></tr>
+      <tr><td><code>|</code> sur set</td><td>union</td><td><code>{1,2} | {2,3}</code></td></tr>
+      <tr><td><code>&amp;</code> sur set</td><td>intersection</td><td><code>{1,2} &amp; {2,3}</code></td></tr>
+      <tr><td><code>-</code> sur set</td><td>difference</td><td><code>{1,2,3} - {2}</code></td></tr>
+      <tr><td><code>^</code> sur set</td><td>difference symetrique</td><td><code>{1,2} ^ {2,3}</code></td></tr>
+      <tr><td><code>|</code> sur dict</td><td>fusion moderne</td><td><code>{"a":1} | {"b":2}</code></td></tr>
+    </table>
+  </div>
+
+  <div class="box">
+    <h2>Niveau 5 - Operateurs plus rares mais experts</h2>
+    <table>
+      <tr><th>Operateur</th><th>Role</th><th>Exemple</th></tr>
+      <tr><td><code>&amp;</code> <code>|</code> <code>^</code></td><td>bitwise sur entiers</td><td><code>6 &amp; 3</code></td></tr>
+      <tr><td><code>~</code></td><td>negation bitwise</td><td><code>~5</code></td></tr>
+      <tr><td><code>&lt;&lt;</code> <code>&gt;&gt;</code></td><td>decalage de bits</td><td><code>1 &lt;&lt; 3</code></td></tr>
+    </table>
+    <p>Ces operateurs sont surtout utiles en bas niveau, optimisation, protocoles binaires ou manipulation de drapeaux.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>x = 9
+print(x % 2 == 1)
+
+lettres = {"a", "b", "c"}
+print("a" in lettres)
+
+g1 = {"Ana", "Leo"}
+g2 = {"Leo", "Mia"}
+print(g1 | g2)
+print(g1 & g2)</pre>
+  </div>
+
+  <div class="box">
+    <h2>[Deployment]</h2>
+    <ul>
+      <li>Pour les exercices classiques: maitrise surtout niveaux 1, 2 et 3.</li>
+      <li>Pour des scripts propres: ajoute le niveau 4.</li>
+      <li>Pour devenir tres solide: connais aussi le niveau 5, mais ne le sur-utilise pas.</li>
+    </ul>
+    <p>Retention cue: <strong>type d'abord, operateur ensuite, structure enfin.</strong></p>
+  </div>
+</div>
+</body>
+</html>

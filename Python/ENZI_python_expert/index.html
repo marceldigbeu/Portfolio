@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENZI Python Expert</title>
+<style>
+  :root {
+    --bg: #0a0f1a;
+    --panel: #111827;
+    --card: #172033;
+    --line: #24324d;
+    --text: #e5eefc;
+    --muted: #9db0d0;
+    --a1: #65e4c0;
+    --a2: #79a8ff;
+    --a3: #ffb86b;
+    --a4: #f777b3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #12203d 0%, var(--bg) 52%);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 22px 60px; }
+  .hero, .panel, .card {
+    background: rgba(17, 24, 39, 0.88);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+  .hero { padding: 28px; margin-bottom: 22px; }
+  .label { color: var(--a1); font-weight: bold; font-size: 13px; letter-spacing: 1px; }
+  h1, h2, h3 { margin: 0 0 10px; }
+  p { margin: 10px 0; color: var(--muted); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .card { padding: 18px; text-decoration: none; color: inherit; display: block; }
+  .card:hover { border-color: var(--a2); transform: translateY(-2px); }
+  .tag { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 12px; margin-bottom: 8px; }
+  .t1 { background: rgba(101, 228, 192, 0.12); color: var(--a1); }
+  .t2 { background: rgba(121, 168, 255, 0.12); color: var(--a2); }
+  .t3 { background: rgba(255, 184, 107, 0.12); color: var(--a3); }
+  .t4 { background: rgba(247, 119, 179, 0.12); color: var(--a4); }
+  .panel { padding: 22px; margin-top: 22px; }
+  code, pre {
+    font-family: Consolas, monospace;
+    background: #0a1324;
+    color: #bfe3ff;
+  }
+  pre {
+    padding: 14px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+  }
+  ul { padding-left: 18px; }
+  li { margin: 8px 0; color: var(--muted); }
+  a.inline { color: var(--a1); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="label">[ENZI ACTIVE]</div>
+      <h1>Python Expert, reconstruit pour toi par niveaux</h1>
+      <p>(System) La fiche d'origine etait une grande carte. Ce dossier la transforme en parcours d'entrainement, avec une montee en complexite qui part des operateurs et finit sur les outils d'expert.</p>
+      <p>[Critical Node] Le point qui controle presque tout est simple: savoir quel operateur agit sur quel type, puis savoir dans quelle structure il doit vivre.</p>
+      <pre>donnees -> operateurs -> conditions -> boucles -> fonctions -> objets -> outils avances</pre>
+    </section>
+
+    <section class="grid">
+      <a class="card" href="niveaux/niveau_1_fondations.html">
+        <div class="tag t1">Niveau 1</div>
+        <h3>Fondations</h3>
+        <p>Variables, types, affectation, comparaisons, calculs, logique de base.</p>
+      </a>
+      <a class="card" href="niveaux/niveau_2_controle_collections.html">
+        <div class="tag t2">Niveau 2</div>
+        <h3>Controle et collections</h3>
+        <p>if, boucles, listes, tuples, dictionnaires, ensembles, parcours de donnees.</p>
+      </a>
+      <a class="card" href="niveaux/niveau_3_fonctions_strings_erreurs.html">
+        <div class="tag t3">Niveau 3</div>
+        <h3>Fonctions et robustesse</h3>
+        <p>fonctions, return, strings, conversion, erreurs, petites architectures propres.</p>
+      </a>
+      <a class="card" href="niveaux/niveau_4_outils_intermediaires.html">
+        <div class="tag t4">Niveau 4</div>
+        <h3>Outils intermediaires</h3>
+        <p>comprehensions, modules, fichiers, built-ins utiles, style de production.</p>
+      </a>
+      <a class="card" href="niveaux/niveau_5_avance_expert.html">
+        <div class="tag t2">Niveau 5</div>
+        <h3>Avance et expert</h3>
+        <p>POO, generateurs, decorators, fonctions avancees, vision systeme.</p>
+      </a>
+      <a class="card" href="references/operateurs_par_niveau.html">
+        <div class="tag t1">Reference</div>
+        <h3>Tous les operateurs par niveau</h3>
+        <p>La carte complete: du calcul de base jusqu'aux operateurs de set, identite et bitwise.</p>
+      </a>
+      <a class="card" href="references/carte_complete_enzi.html">
+        <div class="tag t3">Vue complete</div>
+        <h3>Carte complete ENZI</h3>
+        <p>Tous les chapitres de la fiche source replaces dans une progression unique et lisible.</p>
+      </a>
+    </section>
+
+    <section class="panel">
+      <h2>[Blueprint]</h2>
+      <pre>niveau 1 : je manipule une valeur
+niveau 2 : je manipule une suite de valeurs
+niveau 3 : je construis des blocs reutilisables
+niveau 4 : je combine des outils Python standards
+niveau 5 : je compose des systemes plus riches</pre>
+      <p>Lis ce blueprint comme une chaine mecanique: chaque niveau porte le suivant.</p>
+    </section>
+
+    <section class="panel">
+      <h2>[Deployment]</h2>
+      <ul>
+        <li>Si tu revises vite: fais Niveau 1, Niveau 2, puis la reference des operateurs.</li>
+        <li>Si tu veux devenir solide: fais tout dans l'ordre et recopie a la main les mini-exemples.</li>
+        <li>Si tu bloques sur un exercice: cherche d'abord le type de donnee, puis l'operateur utile, puis la structure de controle.</li>
+      </ul>
+      <p>Retention cue: <strong>Python devient simple quand tu sais qui stocke, qui compare, qui boucle et qui retourne.</strong></p>
+    </section>
+  </div>
+</body>
+</html>

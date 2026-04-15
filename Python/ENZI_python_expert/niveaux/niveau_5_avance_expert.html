@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niveau 5 - Avance et expert</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #120d18; color: #f4efff; line-height: 1.6; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #1b1426; border: 1px solid #3b2c54; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  p, li { color: #cabfe0; }
+  pre, code { font-family: Consolas, monospace; background: #120d1b; color: #f5d9ff; }
+  pre { padding: 14px; border-radius: 12px; border: 1px solid #3b2c54; overflow-x: auto; }
+  .mark { color: #f28ac6; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Niveau 5 - Avance et expert</h1>
+    <p>(System) Ici tu passes du "je sais coder" a "je sais concevoir". Tu manipules des objets, des flux paresseux, des couches de comportement.</p>
+    <p>[Critical Node] <strong>Composer sans perdre la lisibilite</strong>. Un expert ne cherche pas juste la puissance, il garde le controle mental du systeme.</p>
+  </div>
+
+  <div class="box">
+    <h2>[Blueprint]</h2>
+    <pre>objet -> methode -> abstraction
+iterateur -> yield -> flux
+fonction -> decorator -> comportement enrichi</pre>
+    <p>Lis ce blueprint comme un changement d'echelle: tu n'agis plus ligne par ligne, tu construis des couches.</p>
+  </div>
+
+  <div class="box">
+    <h2>Blocs avances</h2>
+    <ul>
+      <li>POO: classes, attributs, methodes, encapsulation simple</li>
+      <li>fonctions avancees: lambda, map, filter, recursion avec prudence</li>
+      <li>generateurs: <code>yield</code></li>
+      <li>decorateurs: envelopper une fonction</li>
+      <li>NumPy: calcul vectorise quand les tableaux deviennent centraux</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>def compteur(maxi):
+    n = 0
+    while n < maxi:
+        yield n
+        n += 1
+
+for valeur in compteur(3):
+    print(valeur)</pre>
+    <p>Un generateur est un convoyeur qui ne produit la piece suivante que quand on la demande. C'est plus leger qu'une liste preconstruite.</p>
+  </div>
+
+  <div class="box">
+    <h2>Mission expert</h2>
+    <pre>1. Cree une classe Etudiant avec nom et notes
+2. Ajoute une methode moyenne()
+3. Ecris un generateur qui produit les etudiants admis
+4. Ajoute un decorator simple pour journaliser les appels</pre>
+  </div>
+
+  <div class="box">
+    <h2>[Deployment]</h2>
+    <p>Memoire utile: debutant = il ecrit ce qu'il veut faire. Intermediaire = il sait quelle structure prendre. Expert = il sait quel niveau d'abstraction garder.</p>
+  </div>
+</div>
+</body>
+</html>

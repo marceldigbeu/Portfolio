@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niveau 4 - Outils intermediaires</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #081018; color: #eef7ff; line-height: 1.6; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 34px 20px 60px; }
+  .box { background: #10202a; border: 1px solid #274455; border-radius: 16px; padding: 22px; margin-bottom: 18px; }
+  p, li { color: #afc4d0; }
+  pre, code { font-family: Consolas, monospace; background: #09151f; color: #cbebff; }
+  pre { padding: 14px; border-radius: 12px; border: 1px solid #274455; overflow-x: auto; }
+  .mark { color: #66e4c5; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="box">
+    <p class="mark">[ENZI ACTIVE]</p>
+    <h1>Niveau 4 - Outils intermediaires</h1>
+    <p>(System) Tu sors du Python scolaire pur pour entrer dans le Python qui va plus vite et s'organise mieux.</p>
+    <p>[Critical Node] <strong>Choisir le bon outil standard avant d'ecrire une boucle inutile.</strong></p>
+  </div>
+
+  <div class="box">
+    <h2>Blocs a maitriser</h2>
+    <ul>
+      <li>list, dict et set comprehensions</li>
+      <li><code>sum</code>, <code>max</code>, <code>min</code>, <code>sorted</code>, <code>enumerate</code>, <code>zip</code></li>
+      <li>modules utiles: <code>math</code>, <code>random</code>, <code>pathlib</code></li>
+      <li>lecture et ecriture de fichiers</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>[Mechanics]</h2>
+    <pre>notes = [12, 8, 19, 14]
+admis = [note for note in notes if note >= 10]
+total = sum(admis)
+
+print(admis)
+print(total)</pre>
+    <p>La comprehension est une chaine de montage compacte: elle lit, filtre et reconstruit en une seule passe lisible.</p>
+  </div>
+
+  <div class="box">
+    <h2>Operateurs qui reviennent</h2>
+    <ul>
+      <li><code>for ... in ... if ...</code> dans les comprehensions</li>
+      <li><code>|</code> pour fusionner des dictionnaires modernes ou faire une union de sets</li>
+      <li><code>with</code> pour encapsuler un fichier proprement</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Mission</h2>
+    <pre>1. Construis une liste des notes admises avec une comprehension
+2. Trie cette liste avec sorted()
+3. Ecris le resultat dans un fichier texte
+4. Relis le fichier et affiche son contenu</pre>
+  </div>
+</div>
+</body>
+</html>
