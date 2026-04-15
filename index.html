@@ -733,6 +733,14 @@
     letter-spacing: 0.1em;
   }
 
+
+  /* SKILL BARS */
+  .skill-bar-wrap { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.7rem; position: relative; }
+  .skill-bar-item { display: flex; flex-direction: column; gap: 0.3rem; }
+  .skill-bar-header { display: flex; justify-content: space-between; font-family: "Roboto Mono", monospace; font-size: 0.62rem; color: var(--muted); }
+  .skill-bar-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .skill-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent2), var(--accent)); border-radius: 2px; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+
   /* SOFT SKILLS */
   .soft-grid {
     display: grid;
@@ -878,12 +886,13 @@
 <nav>
   <div class="nav-logo">MD // IA & DATA</div>
   <ul class="nav-links">
-    <li><a href="#profil">Profil</a></li>
-    <li><a href="#competences">Compétences</a></li>
-    <li><a href="#projets">Projets</a></li>
-    <li><a href="#formation">Formation</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#profil" data-i18n="nav-profil">Profil</a></li>
+    <li><a href="#competences" data-i18n="nav-competences">Compétences</a></li>
+    <li><a href="#projets" data-i18n="nav-projets">Projets</a></li>
+    <li><a href="#formation" data-i18n="nav-formation">Formation</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
   </ul>
+  <button id="lang-toggle" style="background:transparent;border:1px solid var(--accent2);color:var(--accent2);padding:0.3rem 0.8rem;font-family:Roboto Mono,monospace;font-size:0.7rem;cursor:pointer;letter-spacing:0.1em;transition:all 0.2s;" onmouseover="this.style.background='var(--accent2)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent2)'">EN</button>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <button class="back-to-top" id="backTop">&#8679;</button>
@@ -893,20 +902,20 @@
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-tag">Disponible — Stage Mai 2026 · Île-de-France · 22 ans</div>
+    <div class="hero-tag" data-i18n="hero-tag">Disponible — Stage Mai 2026 · Île-de-France · 22 ans</div>
     <h1>
       <span class="name-line">Marcel</span>
       <span class="name-line highlight">DIGBEU</span>
     </h1>
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="hero-desc">
       Futur ingénieur IA & Data · Master Intelligence Artificielle & Data Science à Aivancity.<br>
       Reconverti depuis le Génie Civil, je construis mes compétences sur des projets concrets —
       pipelines de données, Machine Learning, systèmes RAG et IA générative.
       La même rigueur que j'applique au sport et à la biologie, mise au service de la donnée.
     </p>
     <div class="hero-cta">
-      <a href="mailto:digbeumarcel901@gmail.com" class="btn-primary">Me contacter</a>
-      <a href="cv_marcel_digbeu.pdf" download class="btn-outline">Télécharger CV →</a>
+      <a href="mailto:digbeumarcel901@gmail.com" class="btn-primary" data-i18n="btn-contact">Me contacter</a>
+      <a href="cv_marcel_digbeu.pdf" download class="btn-outline" data-i18n="btn-cv">Télécharger CV →</a>
       <a href="https://github.com/marceldigbeu45-ux" target="_blank" class="btn-outline">GitHub →</a>
       <a href="https://www.linkedin.com/in/marcel-digbeu-23a5b4234" target="_blank" class="btn-outline">LinkedIn →</a>
     </div>
@@ -963,87 +972,108 @@
 <!-- COMPÉTENCES -->
 <section id="competences">
   <div class="section-label">Stack technique</div>
-  <h2>Compétences</h2>
+  <h2 data-i18n="section-comp-h2">Compétences</h2>
   <div class="skills-grid">
 
     <div class="skill-card">
       <div class="skill-category">Data Engineering</div>
       <h3>Ingénierie des données</h3>
-      <div class="skill-tags">
-        <span class="tag">ETL Pipelines</span>
-        <span class="tag">API REST</span>
-        <span class="tag">Collecte & Ingestion</span>
-        <span class="tag">Transformation</span>
-        <span class="tag">Automatisation</span>
-      </div>
+      <div class="skill-bar-wrap">
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>ETL Pipelines</span><span>78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>API REST</span><span>82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Automatisation</span><span>74%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="74"></div></div></div>
+    </div>
       <a href="#projets" class="skill-link">→ Voir SEKOIA & AGRITECH</a>
     </div>
 
     <div class="skill-card">
       <div class="skill-category">Langages</div>
       <h3>Programmation</h3>
-      <div class="skill-tags">
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">HTML & CSS</span>
-        <span class="tag">DAX</span>
-        <span class="tag">Bash</span>
-      </div>
+      <div class="skill-bar-wrap">
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Python</span><span>86%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="86"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>SQL</span><span>70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>HTML & CSS</span><span>65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Bash</span><span>58%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="58"></div></div></div>
+    </div>
       <a href="https://github.com/marceldigbeu45-ux/enzi" target="_blank" class="skill-link">→ Voir ENZI Python Expert</a>
     </div>
 
     <div class="skill-card">
       <div class="skill-category">ML & Data Science</div>
       <h3>Machine Learning</h3>
-      <div class="skill-tags">
-        <span class="tag">Scikit-learn</span>
-        <span class="tag">Pandas</span>
-        <span class="tag">NumPy</span>
-        <span class="tag">Classification</span>
-        <span class="tag">Feature Engineering</span>
+<div class="skill-bar-wrap">
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Scikit-learn</span><span>76%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="76"></div></div>
       </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Pandas</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>NumPy</span><span>76%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="76"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Feature Engineering</span><span>72%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="72"></div></div>
+      </div>
+    </div>
       <a href="https://github.com/marceldigbeu45-ux/churn_prediction" target="_blank" class="skill-link">→ Voir Customer Churn Prediction</a>
     </div>
 
     <div class="skill-card">
       <div class="skill-category">IA Générative</div>
       <h3>LLM & IA</h3>
-      <div class="skill-tags">
-        <span class="tag">Prompt Engineering</span>
-        <span class="tag">RAG</span>
-        <span class="tag">LLAMA</span>
-        <span class="tag">ChatGPT</span>
-        <span class="tag">Claude</span>
-        <span class="tag">Gemini</span>
-        <span class="tag">Mistral</span>
+<div class="skill-bar-wrap">
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Prompt Engineering</span><span>87%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="87"></div></div>
       </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>RAG</span><span>78%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>LLMs (Gemini/Claude/GPT)</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+      </div>
+    </div>
       <a href="#projets" class="skill-link">→ Voir SEKOIA</a>
     </div>
 
     <div class="skill-card">
       <div class="skill-category">Visualisation</div>
       <h3>Data Viz</h3>
-      <div class="skill-tags">
-        <span class="tag">Streamlit</span>
-        <span class="tag">Matplotlib</span>
-        <span class="tag">Seaborn</span>
-        <span class="tag">Excel</span>
-        <span class="tag">Power BI</span>
-      </div>
+      <div class="skill-bar-wrap">
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Streamlit</span><span>82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Matplotlib / Seaborn</span><span>78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78"></div></div></div>
+      <div class="skill-bar-item"><div class="skill-bar-header"><span>Power BI</span><span>65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div></div>
+    </div>
       <a href="#projets" class="skill-link">→ Voir AGRITECH & SEKOIA</a>
     </div>
 
     <div class="skill-card">
       <div class="skill-category">Outils & DevOps</div>
       <h3>Environnement</h3>
-      <div class="skill-tags">
-        <span class="tag">Docker</span>
-        <span class="tag">Git / GitHub</span>
-        <span class="tag">n8n</span>
-        <span class="tag">Jupyter Lab</span>
-        <span class="tag">Playwright</span>
-        <span class="tag">Power Automate</span>
+<div class="skill-bar-wrap">
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Git / GitHub</span><span>82%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
       </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Docker</span><span>66%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="66"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>n8n</span><span>72%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="72"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-header"><span>Playwright</span><span>65%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
+      </div>
+    </div>
       <a href="#projets" class="skill-link">→ Voir SEKOIA</a>
     </div>
 
@@ -1096,7 +1126,7 @@
 <!-- PROJETS -->
 <section id="projets">
   <div class="section-label">Réalisations</div>
-  <h2>Projets</h2>
+  <h2 data-i18n="section-projets-h2">Projets</h2>
   <div class="projects-grid">
 
     <div class="project-card">
@@ -1264,7 +1294,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-label" style="justify-content: center;">Prenons contact</div>
-  <h2>Contact</h2>
+  <h2 data-i18n="section-contact-h2">Contact</h2>
   <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem;">
     Disponible pour un stage de 2 à 3 mois à partir de <strong style="color: var(--accent);">mai 2026</strong> · Île-de-France
   </p>
@@ -1510,6 +1540,70 @@ window.addEventListener('scroll', () => {
 backTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// SKILL BARS ANIMATION
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.pct + '%';
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.skill-card').forEach(card => barObserver.observe(card));
+
+// FR/EN TOGGLE
+const translations = {
+  fr: {
+    'nav-profil': 'Profil', 'nav-competences': 'Compétences', 'nav-projets': 'Projets',
+    'nav-formation': 'Formation', 'nav-contact': 'Contact',
+    'hero-tag': 'Disponible — Stage Mai 2026 · Île-de-France · 22 ans',
+    'hero-desc': 'Futur ingénieur IA & Data · Master Intelligence Artificielle & Data Science à Aivancity.<br>Reconverti depuis le Génie Civil, je construis mes compétences sur des projets concrets — pipelines de données, Machine Learning, systèmes RAG et IA générative. La même rigueur que j'applique au sport et à la biologie, mise au service de la donnée.',
+    'btn-contact': 'Me contacter', 'btn-cv': 'Télécharger CV →',
+    'section-profil-label': 'Qui suis-je', 'section-profil-h2': 'Profil',
+    'section-comp-label': 'Stack technique', 'section-comp-h2': 'Compétences',
+    'section-projets-label': 'Réalisations', 'section-projets-h2': 'Projets',
+    'section-formation-label': 'Parcours', 'section-formation-h2': 'Formation & Expériences',
+    'section-contact-label': 'Prenons contact', 'section-contact-h2': 'Contact',
+    'contact-desc': 'Disponible pour un stage de 2 à 3 mois à partir de <strong style="color:var(--accent)">mai 2026</strong> · Île-de-France',
+    'toggle-btn': 'EN'
+  },
+  en: {
+    'nav-profil': 'Profile', 'nav-competences': 'Skills', 'nav-projets': 'Projects',
+    'nav-formation': 'Education', 'nav-contact': 'Contact',
+    'hero-tag': 'Available — Internship May 2026 · Paris area · 22 y.o.',
+    'hero-desc': 'Future AI & Data Engineer · Master's in Artificial Intelligence & Data Science at Aivancity.<br>Career changer from Civil Engineering, I build my skills through hands-on projects — data pipelines, Machine Learning, RAG systems and generative AI. The same discipline I apply to sport and biology, now serving data.',
+    'btn-contact': 'Contact me', 'btn-cv': 'Download CV →',
+    'section-profil-label': 'About me', 'section-profil-h2': 'Profile',
+    'section-comp-label': 'Tech stack', 'section-comp-h2': 'Skills',
+    'section-projets-label': 'Work', 'section-projets-h2': 'Projects',
+    'section-formation-label': 'Background', 'section-formation-h2': 'Education & Experience',
+    'section-contact-label': 'Get in touch', 'section-contact-h2': 'Contact',
+    'contact-desc': 'Available for a 2-3 month internship from <strong style="color:var(--accent)">May 2026</strong> · Paris area',
+    'toggle-btn': 'FR'
+  }
+};
+
+let currentLang = 'fr';
+const langBtn = document.getElementById('lang-toggle');
+
+function applyLang(lang) {
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  langBtn.textContent = t['toggle-btn'];
+  currentLang = lang;
+}
+
+if (langBtn) {
+  langBtn.addEventListener('click', () => {
+    applyLang(currentLang === 'fr' ? 'en' : 'fr');
+  });
+}
 </script>
 </body>
 </html>
